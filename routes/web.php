@@ -15,7 +15,7 @@ use App\Http\Controllers\SLTest1Controlller;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome to raihan ');
 });
 Route::get('/hello/{name?}',[SLTest1Controlller::class,'hello']);
 Route::post('/spr',[SLTest1Controlller::class,'managePostRequest']);
