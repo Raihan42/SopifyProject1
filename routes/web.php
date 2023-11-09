@@ -15,8 +15,10 @@ use App\Http\Controllers\SLTest1Controlller;
 */
 
 Route::get('/', function () {
-    return view('welcome to raihan ');
-});
+    return view('welcome');
+})->middleware(['verify.shopify'])->name('home');
+
 Route::get('/hello/{name?}',[SLTest1Controlller::class,'hello']);
 Route::post('/spr',[SLTest1Controlller::class,'managePostRequest']);
+
 
