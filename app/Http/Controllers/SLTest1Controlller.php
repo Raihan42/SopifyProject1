@@ -18,4 +18,12 @@ class SLTest1Controlller extends Controller
 
         return response("Post request output {$name} - {$roll} ",200);
     }
+
+    function shopGetRequest(Request $request){
+
+        $shop = $request->user();
+        $shop = $shop->api()->rest('GET','/admin/shop.json');
+        echo "<pre>";
+        print_r($shop['body']);
+    }
 }

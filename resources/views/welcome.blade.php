@@ -1,12 +1,9 @@
-@extends('shopify-app::layouts.default')
+@extends('layouts.master')
+
+@section('title', 'Dashboard')
 
 @section('content')
-
-    <p> My first Shopify Application </p>
-    <!-- You are: (shop domain name) -->
-
-    <p>You are: {{ $shopDomain ?? Auth::user()->name }}</p>
-
+    <h2>Store FAQ</h2>
 @endsection
 
 @section('scripts')
